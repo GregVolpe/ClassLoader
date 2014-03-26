@@ -6,10 +6,6 @@
 
 package classloadertest;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -26,7 +22,7 @@ public class ClassLoaderTest {
     public static void main(String[] args) throws NoSuchMethodException {
         try {
             CustomURLClassLoader loader = new CustomURLClassLoader();
-            Class<?> c = loader.loadClass("taskscheduling", true);
+            Class<?> c = loader.loadClass("taskscheduling");
             System.out.println("The name is:");
             System.out.println(c.getName());
 
