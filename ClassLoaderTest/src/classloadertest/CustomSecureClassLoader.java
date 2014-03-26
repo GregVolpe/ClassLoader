@@ -76,7 +76,7 @@ public class CustomSecureClassLoader extends SecureClassLoader {
             return null;
         }
     }
-
+    
     protected CodeSource getCodeSource(String name) {
         try {
             return new CodeSource(new URL("file", "localhost", name), null);
