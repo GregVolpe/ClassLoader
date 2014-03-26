@@ -9,9 +9,10 @@ public class CustomURLClassLoader extends URLClassLoader {
 
     static {
         try {
-            urls = new URL[2];
+            urls = new URL[3];
             urls[0] = new URL("http://piccolo.East/~sdo/");
             urls[1] = new URL("file:/home/classes/LocalClasses.jar");
+            urls[2] = new URL("file:C:\\Users\\Asus\\Documents\\JavaClass\\TaskScheduling.jar");
         } catch (Exception e) {
             throw new RuntimeException("Can't create URLs " + e);
         }
