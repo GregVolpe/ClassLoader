@@ -6,8 +6,13 @@
 
 package classloadertest;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /**
  *
@@ -18,12 +23,19 @@ public class ClassLoaderTest {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-        CustomURLClassLoader loader = new CustomURLClassLoader();
+    public static void main(String[] args) throws NoSuchMethodException {
+        try {
+            CustomURLClassLoader loader = new CustomURLClassLoader();
+            Class<?> c = loader.loadClass("taskscheduling", true);
+            System.out.println("The name is:");
+            System.out.println(c.getName());
+
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ClassLoaderTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
-        Class<?> c = loader.loadClass("MainActivity.class");
-        Method m = c.getMethod("main", String[].class);
-         m.invoke(null, (Object) new String[] {});
+
+         
 
 
     }
