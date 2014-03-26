@@ -1,6 +1,5 @@
 package classloadertest;
 
-
 import java.net.*;
 import java.security.*;
 import java.io.*;

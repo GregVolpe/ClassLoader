@@ -1,7 +1,5 @@
 package classloadertest;
 
-
-
 import java.net.*;
 import java.security.*;
 
