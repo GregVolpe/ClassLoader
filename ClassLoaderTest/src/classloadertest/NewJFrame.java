@@ -43,7 +43,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        JARbutton.setText("Open Using JAR File");
+        JARbutton.setText("Open Using JAR File Loader");
         JARbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JARbuttonActionPerformed(evt);
