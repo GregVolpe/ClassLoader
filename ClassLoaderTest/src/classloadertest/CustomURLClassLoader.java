@@ -10,8 +10,8 @@ public class CustomURLClassLoader extends URLClassLoader {
     static {
         try {
             urls = new URL[1];
-            urls[0] = new URL("http://apollophotos.com/cs360/mergesort/");
-            //urls[0] = new URL("file:/home/classes/TaskScheduling.jar");
+            //urls[0] = new URL("http://apollophotos.com/cs360/mergesort/");
+            urls[0] = new URL("http://apollophotos.com/cs360/classLoader/");
             // urls[0] = new URL("file:localhost\\TaskScheduling.jar");
         } catch (Exception e) {
             throw new RuntimeException("Can't create URLs " + e);

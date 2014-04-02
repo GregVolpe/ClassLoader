@@ -109,8 +109,9 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
          CustomURLClassLoader loader = new CustomURLClassLoader();
-         Class<?> c = loader.loadClass("MergeSortActivity");
+         Class<?> c = loader.loadClass("PersistentAnimationTester");
          Method m = c.getMethod("main", String[].class);
+         
          try {
          m.invoke(null, (Object) new String[] {});
          } catch (IllegalAccessException ex) {
