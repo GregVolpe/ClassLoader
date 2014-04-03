@@ -29,9 +29,10 @@ public class JarClassLoader extends URLClassLoader {
 
     public String getMainClassName() throws IOException {
         //URL u = new URL("jar", "", url + "MergeSortActivity.jar!/");
-        URL u = new URL("jar:http://www.apollophotos.com/cs360/test/MergeSortActivity.jar!/");
+        URL u = new URL("jar:http://www.apollophotos.com/cs360/test/mergesortactivity/MergeSortActivity.jar!/");
         JarURLConnection uc = (JarURLConnection) u.openConnection();
         Attributes attr = uc.getMainAttributes();
+        System.out.println();
         //return uc.getManifest().getMainAttributes().getValue("Main-Class");
         
         return attr != null
